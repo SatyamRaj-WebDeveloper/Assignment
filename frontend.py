@@ -13,7 +13,7 @@ question = st.text_input("Enter your question:")
 
 if st.button("Ask"):
     if question:
-        response = requests.get(f"http://127.0.0.1:8000/query", params={"question": question})
+        response = requests.get(f"https://tailortalk-nycw.onrender.com/query", params={"question": question})
         data = response.json()
 
         if "response" in data:
